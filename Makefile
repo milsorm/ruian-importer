@@ -1,7 +1,9 @@
-.phony: all clean
+.phony: all download clean
 
-all:
-	php -f tools/importer.php
+all: download
+
+download:
+	php -f tools/importer.php -- -d
 
 clean:
 
